@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ArcTube</title>
+<link rel="shortcut icon" type="image/x-icon" href="asset/images/arcicon.ico" />
+<link rel="stylesheet" type="text/css" href="asset/css/style.css">
+
+<script type="text/javascript" src="asset/js/jquery-3.2.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('.alldiv, .playing').click(function(){
+        
+		$('.playing').attr('class',"alldiv");
+		$('.playing').fadeIn("slow");
+		$('.animation1').fadeIn("slow");
+		$('.animation2').fadeIn("slow");
+		setTimeout(function(){ $('.animation1').fadeOut("slow"); $('.animation2').fadeOut("slow");}, 1000);
+		$(this).attr('class','playing');
+		$(this).fadeOut("slow");
+		$('.videotext').text($(this).find('.link').text());
+		$('.Titulo').find('#titleholder').text($(this).find('.link').text());
+		$('.views').text($(this).find('#views').text());
+		var videoFile = $(this).find('a').attr("href");
+		$('#playing').find('video').attr('src', videoFile);
+		$('#playing').find('video')[0].load();
+    });
+});
+</script>
+</head>
+
+
+<body>
+
+	<div class="topnav">
+	
+	<a class="active" href="#home" style="clear:both;">Home</a>
+	<a href="#about">About</a>
+	<a href="#contact">Contact</a>
+	<a id="Logo" href="#logo"><img class="logo" src="asset/images/arclogo.png"></a>
+	<div class="search-container">
+    <form action="myproject.html">
+      <input type="text" placeholder="Search..." name="search">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div id="whole">
+	<div id="focusedTab">
+				<div id="playing">
+					<video id="playingvid" height="450px" width="800px"controls >
+						<source src="asset/videos/videos1.mp4" type="video/mp4" />
+					</video>
+					<div class="animation1"></div><div class="animation2"></div>
+					<div class="Titulo"><h1 id="titleholder">Despacito (Song Cover by Sam Tsu) Live Love Party</h1></div>
+					<div class="playinfo">
+						<p class="videotext">Despacito (Song Cover by Sam Tsu) Live Love Party</p>
+						<span class="uploaded">Uploaded: 2 months ago</span>
+					</div>
+					<div class="optiontab">
+						<button class="btns"><p> &#10010; Add</p></button>
+						<button class="btns"><p> &#10150; Share</p></button>
+						<button class="btns"><p> &#9776; More</p></button>
+						<span class="views">&#10084; 5,234,567 views<span>
+					</div>
+				</div>
+				<div class="commentsection">
+					<div class="commentholder">
+						<img class="userprof" src="asset/images/01.jpg">
+						<div class="username">Sad Boy of Love Town</div>
+						<div class="DateUploaded"> 2 months ago</div>
+						<div class="commentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+					</div>
+					<div class="commentholder">
+						<img class="userprof" src="asset/images/02.png">
+						<div class="username">Single Maroon</div>
+						<div class="DateUploaded"> 2 months ago</div>
+						<div class="commentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+					</div>
+					<div class="commentholder">
+						<img class="userprof" src="asset/images/03.jpg">
+						<div class="username">420 Userz</div>
+						<div class="DateUploaded"> 2 months ago</div>
+						<div class="commentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+					</div>
+					<div class="commentholder">
+						<img class="userprof" src="asset/images/04.jpg">
+						<div class="username">+YBOZ+</div>
+						<div class="DateUploaded"> 2 months ago</div>
+						<div class="commentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+					</div>
+					<div class="commentin">
+						<input  class="commentinput" type="text" placeholder="ENTER COMMENT HERE . . . !"></input>
+						<button class="btns submit"> SUBMIT</button>
+					</div>
+				</div>
+
+
+	</div>
+	<div id="tabs"  >
+		<div class="alldiv" id="div1">
+			<a id="linkhold" href="asset/videos/videos6.mp4">
+				<div class="vidtumbnail"><a class="noclass" href="#"></a>
+					<video width="200" height="100" class="othervideos">
+						<source src="asset/videos/videos6.mp4" type="video/mp4" />
+					</video>
+				</div>
+				<div class="vidtextlink">
+					<a class="link" href="#">All About that Base - Just Dance - Full Gameplay 5 Stars KINECT</a>
+					<p class="vidinfo"><div class="vidinfo">Duration: 00:10:00</div><div id="views" class="vidinfo">5,222,333 views</div><div id="uploaded" class="vidinfo">2 months ago</div></p>
+				</div>
+			</a>
+		</div>
+		<div class="alldiv" id="div2">
+			<a id="linkhold" href="asset/videos/videos3.mp4">
+				<div class="vidtumbnail"><a class="noclass" href="#"></a>
+					<video width="200" height="100" class="othervideos">
+						<source src="asset/videos/videos3.mp4" type="video/mp4" />
+					</video>
+				
+				</div>
+				<div class="vidtextlink">
+					<a class="link" href="#vid3">Just Dance 2018: Side to Side - 5 stars</a>
+					<p class="vidinfo"><div class="vidinfo">Duration: 00:10:00</div><div id="views" class="vidinfo">2,234,567 views</div><div id="uploaded" class="vidinfo">2 months ago</div></p>
+				</div>
+			</a>
+		</div>
+		<div class="alldiv" id="div3" >
+			<a id="linkhold" href="asset/videos/videos2.mp4">
+				<div class="vidtumbnail"><a class="noclass" href="#"></a>
+					<video width="200" height="100" class="othervideos">
+						<source src="asset/videos/videos2.mp4" type="video/mp4" />
+					</video>
+				</div>
+				<div class="vidtextlink">
+					<a class="link" href="#vid4">Twerk It Like Miley - The Fitness Marshall - Cardio Concert</a>
+					<p class="vidinfo"><div class="vidinfo">Duration: 00:10:00</div><div id="views" class="vidinfo">4,234,567 views</div><div id="uploaded" class="vidinfo">2 months ago</div></p>
+				</div>
+			</a>
+		</div>
+		<div class="playing" id="div4">
+			<a id="linkhold" href="asset/videos/videos1.mp4">
+				<div class="vidtumbnail"><a class="noclass" href="#"></a>
+					<video width="200" height="100" class="othervideos">
+						<source src="asset/videos/videos1.mp4" type="video/mp4" />
+					</video>
+				</div>
+				<div class="vidtextlink">
+					<a class="link" href="#vid1">Despacito (Song Cover by Sam Tsu) Live Love Party</a>
+					<p class="vidinfo"><div class="vidinfo">Duration: 00:10:00</div><div id="views" class="vidinfo">5,234,567 views</div><div id="uploaded" class="vidinfo">2 months ago</div></p>
+				</div>
+			</a>
+		</div>
+		
+		<div class="alldiv" id="div5">
+			<a id="linkhold" href="asset/videos/videos4.mp4">
+				<div class="vidtumbnail"><a class="noclass" href="#"></a>
+					<video width="200" height="100" class="othervideos">
+						<source src="asset/videos/videos4.mp4" type="video/mp4" />
+					</video>
+				</div>
+				<div class="vidtextlink">
+					<a class="link" href="#vid1">Just Dance 4 - Run The Show (Extreme Version)</a>
+					<p class="vidinfo"><div class="vidinfo">Duration: 00:10:00</div><div id="views" class="vidinfo">12,234,567 views</div><div id="uploaded" class="vidinfo">2 months ago</div></p>
+				</div>
+			</a>
+		</div>
+		
+		<div class="alldiv" id="div6">
+			<a id="linkhold" href="asset/videos/videos5.mp4">
+				<div class="vidtumbnail"><a class="noclass" href="#"></a>
+					<video width="200" height="100" class="othervideos">
+						<source src="asset/videos/videos5.mp4" type="video/mp4" />
+					</video>
+				</div>
+				<div class="vidtextlink">
+					<a class="link" href="#vid1">Havana | Live Love Party™ | Zumba®</a>
+					<p class="vidinfo"><div class="vidinfo">Duration: 00:10:00</div><div id="views" class="vidinfo">3,234,567 views</div><div id="uploaded" class="vidinfo">2 months ago</div></p>
+				</div>
+			</a>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
